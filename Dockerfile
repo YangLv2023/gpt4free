@@ -23,8 +23,8 @@ ENV PATH="/usr/app/venv/bin:$PATH"
 COPY --from=builder /usr/app/venv ./venv
 COPY . .
 
-RUN cp ./gui/streamlit_app.py .
+# RUN cp ./gui/streamlit_app.py .
 
 CMD ["streamlit", "run", "streamlit_app.py"]
 
-EXPOSE 8501
+EXPOSE 80
