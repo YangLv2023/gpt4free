@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="gpt" method="post">
+    <input type="text" name="content">
+    <input type="submit" value="提交">
+</form>
+<table>
+    <thead>
+    <tr>
+        <td>ID：</td>
+        <td>ME：</td>
+        <td>GPT：</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for i in chat %}
+        <td> {{i}} </td>
+        <td> {{chat[i].ME}} </td>
+        <td> {{chat[i].GPT}} </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
