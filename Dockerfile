@@ -1,5 +1,5 @@
 FROM python:3.11 as builder
-
+COPY . /app
 WORKDIR /app
 ENV PATH="/app/venv/bin:$PATH"
 
